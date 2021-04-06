@@ -1,9 +1,11 @@
 {
-  "name": "hsy-cli",
+  "name": "@huisiyu/hsy-cli",
   "version": "1.0.0",
   "description": "simple scaffolding",
   "main": "index.js",
-  "bin": "cli.js",
+  "bin": {
+    "hsy-cli": "cli.js"
+  },
   "author": "huisiyu",
   "license": "MIT",
   "private": false,
