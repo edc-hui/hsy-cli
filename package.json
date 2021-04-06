@@ -1,0 +1,14 @@
+{
+  "name": "hsy-cli",
+  "version": "1.0.0",
+  "description": "simple scaffolding",
+  "main": "index.js",
+  "bin": "cli.js",
+  "author": "huisiyu",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "inquirer": "^8.0.0"
+  }
+}
