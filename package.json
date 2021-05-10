@@ -2,15 +2,35 @@
   "name": "@huisiyu/hsy-cli",
   "version": "1.0.0",
   "description": "simple scaffolding",
-  "main": "index.js",
+  "keywords": [
+    "scaffolding",
+    "react",
+    "react scaffolding"
+  ],
+  "main": "lib/index.js",
   "bin": {
-    "hsy-cli": "cli.js"
+    "hsy": "bin/cli.js"
   },
+  "files": [
+    "bin",
+    "lib"
+  ],
   "author": "huisiyu",
   "license": "MIT",
   "private": false,
   "dependencies": {
-    "ejs": "^3.1.6",
-    "inquirer": "^8.0.0"
+    "axios": "^0.21.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com",
+    "access": "public"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "ncp": "^2.0.0",
+    "ora": "^5.4.0"
   }
 }
