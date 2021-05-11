@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico">
+    <title>一个React项目</title>
+</head>
+<body>
+<div id="root"></div>
+<script>
+    var designWidth = 1920 // 设计稿的宽度  --- 已知
+    var designHtmlFontSize = 100; // 设计稿上面的html font-size的大小  --- 已知
+    var actualHtmlFontSize; // 实际html font-size的大小 --- 未知
+    function setRootFontSize() {
+        var htmlDOM = document.getElementsByTagName('html')[0];
+        var viewportWidth = document.documentElement.clientWidth || document.body.clientWidth; // 实际浏览器视口的宽度 ---- 已知
+        actualHtmlFontSize = viewportWidth * designHtmlFontSize / designWidth; // 3个已知条件，1个未知条件
+        htmlDOM.style.fontSize = actualHtmlFontSize + 'px';
+    }
+
+    setRootFontSize()
+    window.addEventListener("resize", setRootFontSize)
+</script>
+</body>
+</html>
