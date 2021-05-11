@@ -35,7 +35,7 @@ Object.keys(commanderActions).forEach(action => {
                     return
                 }
                 if (process.argv.slice(3).length > 1) {
-                    spinner.fail("项目名称只允许输入一个")
+                    spinner.fail("项目名称只允许输入一个并且不能有空格")
                     return
                 }
                 const projectName = process.argv.slice(3)[0];
